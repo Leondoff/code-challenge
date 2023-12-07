@@ -1,36 +1,41 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <regex.h>
 
-int isCharInArray(char target, const char *charArray) {
-    while (*charArray != '\0') {
-        if (*charArray == target) {
-            return 1; // Character found
-        }
-        charArray++;
-    }
-    return 0; // Character not found
-}
+int isValidString(const char *input) {
+    regex_t regex;
+    const char *pattern = "^[A-Z]*$|\\[.*\\]|\\{.*\\}|\\(.*\\)$";
 
-int areAllCharsInArray(const char *str) {
-    const char validChars [] = {'(',')','{','}','[',']','\0'};
-    while (*str != '\0') {
-        if (!isCharInArray(*str, validChars)) {
-            return 0; // At least one character not found
-        }
-        str++;
+    if (regcomp(&regex, pattern, REG_EXTENDED) != 0) {
+        fprintf(stderr, "Error compiling regex pattern\n");
+        return 0; // Error
     }
-    return 1; // All characters found
+
+    int match = regexec(&regex, input, 0, NULL, 0);
+
+    regfree(&regex);
+
+    return match == 0;
 }
 
 int main() {
-    char validChars [] = {'(',')','{','}','[',']','\0'};
-    char c = '{}';
+    char input[100];
 
+    printf("Enter a string: ");
+    fgets(input, sizeof(input), stdin);
 
-    if (areAllCharsInArray(&c)) {
-        printf("true\n");
-    } else {
-        printf("false\n");
+    // Remove the newline character at the end (if present)
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (input[i] == '\n') {
+            input[i] = '\0';
+            break;
+        }
     }
+
+    if (isValidString(input)) {
+        printf("The string is valid.\n");
+    } else {
+        printf("The string is not valid.\n");
+    }
+
     return 0;
 }
