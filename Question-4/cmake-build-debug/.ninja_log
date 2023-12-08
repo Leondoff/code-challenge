@@ -1,4 +1,5 @@
 # ninja log v5
-160	305	7236765905209430	Question_4.exe	e2dadd7d5558d0c8
-4	159	7236765903792419	CMakeFiles/Question_4.dir/main.c.obj	69d4f81341fe2ed4
-5	447	7236804216304384	build.ninja	284a2d777cc8cac3
+0	148	7237057663748985	CMakeFiles/Question_4.dir/main.c.obj	69d4f81341fe2ed4
+150	822	7237057668102295	Question_4.exe	e2dadd7d5558d0c8
+5	177	7237074199156563	CMakeFiles/Question_4.dir/main.c.obj	69d4f81341fe2ed4
+178	333	7237074200620549	Question_4.exe	e2dadd7d5558d0c8
