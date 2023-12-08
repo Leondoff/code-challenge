@@ -201,3 +201,71 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake:95 (try_compile)"
+      - "CMakeLists.txt:9 (check_include_file)"
+    checks:
+      - "Looking for regex.h"
+    directories:
+      source: "C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p"
+      binary: "C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAVE_REGEX_H"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p
+        
+        Run Build Command(s):C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/ninja/win/x64/ninja.exe -v cmTC_2b883 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -o CMakeFiles/cmTC_2b883.dir/CheckIncludeFile.c.obj -c C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p/CheckIncludeFile.c
+        \x1b[31mFAILED: \x1b[0mCMakeFiles/cmTC_2b883.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -o CMakeFiles/cmTC_2b883.dir/CheckIncludeFile.c.obj -c C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p/CheckIncludeFile.c
+        C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-t10l9p/CheckIncludeFile.c:1:10: fatal error: regex.h: No such file or directory
+            1 | #include <regex.h>
+              |          ^~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake:95 (try_compile)"
+      - "CMakeLists.txt:7 (check_include_file)"
+    checks:
+      - "Looking for Question_4"
+    directories:
+      source: "C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od"
+      binary: "C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "main.c"
+      cached: true
+      stdout: |
+        Change Dir: C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od
+        
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_42af5 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_42af5.dir/CheckIncludeFile.c.obj -c C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_42af5.dir/CheckIncludeFile.c.obj 
+        C:\\PROGRA~1\\JETBRA~1\\CLION2~1.2\\bin\\mingw\\bin\\gcc.exe   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_42af5.dir/CheckIncludeFile.c.obj -c C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od/CheckIncludeFile.c
+        C:/Users/maziy/Documents/code-challenge/Question-4/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5m67od/CheckIncludeFile.c:1:10: fatal error: Question_4: No such file or directory
+            1 | #include <Question_4>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
